@@ -1,0 +1,63 @@
+body{
+    background: rgb(163, 157, 157);
+}
+@keyframes spin{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.taiji{
+    border-radius: 50%;
+    width: 320px;
+    height: 320px;
+    background: linear-gradient(to bottom, #fff 0%,#fff 50%,#000 50%,#000 100%);
+    position: relative;
+    margin: 100px auto;
+    animation-duration: 3s;
+    animation-name: spin;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.taiji .yin{
+    background: #000;
+    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    top: 80px;
+    left: 0;
+}
+.taiji .yin .taiyang{
+    background: #fff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 70px;
+    left: 70px;
+} 
+.taiji .yang{
+    background: #fff;
+    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    top: 80px;
+    right: 0;
+}
+.taiji .yang .taiyin{
+    background: #000;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 70px;
+    left: 70px;
+} 
+p{
+    color: #fff;
+    text-align: center;
+}
