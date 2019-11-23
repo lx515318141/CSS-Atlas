@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::before {
+  box-sizing: border-box;
+}
+*::after {
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(255, 230, 0);
+}
+.wrapper {
+  height: 192px;
+  width: 100%;
+  position: relative;
+}
+.nose {
+  height: 0px;
+  width: 0px;
+  border-radius: 50%;
+  border: 10px;
+  border-style: solid;
+  border-width: 10px 13px;
+  border-color: black transparent transparent transparent;
+  /* 让元素宽高为0，再让加一个较粗的border-radius，既可以得到一个圆形 */
+  /* 再用border-color给border的四个边不同的颜色，就可以得到四个扇形，顺序为上右下左,通过设置transparent(透明)来得到不同方向的扇形 */
+  position: absolute;
+  top: 27px;
+  left: 50%;
+  /* 使用left50%的时候其实是该元素的左边线距离父元素左边50%，所有不是完全居中 */
+  margin-left: -13px;
+  /* 所有需要让该元素再往左边移动自身宽度的一半，也可以使用transform：translateX(-50%),此方法与上一行代码等价 */
+}
+.eye {
+  height: 53px;
+  width: 53px;
+  background: rgb(46, 46, 46);
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid #000000;
+}
+.eye::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  border: 3px solid #000000;
+  background: white;
+  left: 7px;
+  top: -1px;
+}
+.eye.left {
+  right: 50%;
+  margin-right: 90px;
+}
+.eye.right {
+  left: 50%;
+  margin-left: 90px;
+}
+.face {
+  height: 72px;
+  width: 72px;
+  background: rgb(255, 0, 0);
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid #000000;
+  top: 90px;
+}
+.face.left {
+  right: 50%;
+  margin-right: 134px;
+}
+.face.right {
+  left: 50%;
+  margin-left: 134px;
+}
+.upperLip {
+  height: 18px;
+  width: 70px;
+  border: 3px solid #000000;
+  position: absolute;
+  z-index: 1;
+  background: rgb(255, 230, 0);
+  top: 54px;
+}
+.upperLip.left {
+  border-top: none;
+  border-right: none;
+  border-bottom-left-radius: 40px 20px;
+  transform: rotate(-25deg);
+  right: 50%;
+  margin-right: -1px;
+  box-shadow: -14px -16px rgb(255, 230, 0);
+}
+.upperLip.right {
+  border-top: none;
+  border-left: none;
+  border-bottom-right-radius: 40px 20px;
+  transform: rotate(25deg);
+  left: 50%;
+  margin-left: -1px;
+  box-shadow: 9px -16px rgb(255, 230, 0);
+}
+.tongue {
+  position: absolute;
+  left: 50%;
+  margin-left: -100px;
+  bottom: 0px;
+  height: 138px;
+  width: 200px;
+  overflow: hidden;
+}
+.lowerLip {
+  width: 200px;
+  height: 702px;
+  background: rgb(155, 0, 10);
+  border: 3px solid #000000;
+  border-bottom-left-radius: 104px 702px;
+  border-bottom-right-radius: 104px 702px;
+  position: absolute;
+  bottom: 0px;
+  overflow: hidden;
+}
+.lowerLip::after {
+  content: "";
+  bottom: -100px;
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  background: rgb(255, 72, 95);
+  border-radius: 100px/100px;
+  left: 50%;
+  margin-left: -100px;
+}
