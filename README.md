@@ -10,6 +10,6 @@
 
   [源码](https://github.com/lx515318141/CSS-Atlas/tree/master/weileiTaiJi) [预览](https://lx515318141.github.io/CSS-Atlas/weileiTaiJi/index.html)
 
-- 画皮卡丘
+## 2.Pikachu
 
   [源码](https://github.com/lx515318141/CSS-Atlas/tree/master/pikachu) [预览](https://lx515318141.github.io/CSS-Atlas/pikachu/index.html)
