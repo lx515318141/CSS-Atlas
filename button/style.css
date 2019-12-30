@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.normal {
+  display: inline-block;
+  background: none;
+  border: none;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 16px;
+  border: none;
+  font-size: 14px;
+  transition: all 0.5s;
+  position: relative;
+  margin: 100px;
+  overflow: hidden;
+  z-index: 0;
+}
+.normal:hover{
+    background: #e5e5e5;
+}
+.normal:focus{
+    outline: none;
+    background: #e5e5e5;
+}
+.normal > .circle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 10px;
+    width: 10px;
+    margin-top: -5px;
+    margin-left: -5px;
+    background: #8888;
+    border-radius: 50%;
+    transition: transform 0.3s;
+    visibility: hidden;
+    /* 与下面的visibility一起使用，可以让次元素开始不显示，进入active状态才显示，且动画能正常运行 */
+    pointer-events: none;
+    /* 可以让用户的所有click事件直接穿透 */
+    z-index: -1;
+    /* 和父元素的z-index：0；可以构成堆叠上下文，让涟漪显示在文字的后面 */
+}
+.normal > .circle.active{
+    transform: scale(10);
+    /* 让其扩大十倍 */
+    visibility: visible;
+}

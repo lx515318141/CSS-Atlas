@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+}
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+ul,
+ol {
+  list-style: none;
+}
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.suggestion {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+}
+.suggestion.active{
+    display: block;
+}
+.wrapper{
+    display: flex;
+    position: relative;
+}
+.inputWrapper {
+  position: relative;
+  display: inline-block;
+}
+.floatDiv {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+.floatDiv .splitLine {
+    width: 0;
+    height: 16px;
+    border-left: 1px solid #b8b8b8;
+    margin: 0 10px;
+  }
+.inputWrapper {
+  float: left;
+}
+.inputWrapper + button {
+  float: left;
+  background: RGB(51,133,255);
+  font-size: 15px;
+  color: white;
+  padding: 0 20px;
+  border: none;
+}
+.inputWrapper + button:focus{
+    outline: none;
+}
+.inputWrapper + button:hover{
+    background: RGB(49,126,243);
+    box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+.inputWrapper input[type="text"] {
+  border: 1px solid RGB(153,153,153);
+  width: 540px;
+  height: 35px;
+  padding-left: 9px;
+  font-size: 15px;
+  line-height: 35px;
+}
+.inputWrapper input[type="text"]:focus {
+  outline: none;
+  border-color: #4b94fc;
+}
+.inputWrapper svg.icon {
+  width: 22px;
+  height: 22px;
+  fill: RGB(153,153,153);
+}
+
+.inputWrapper svg.icon:hover{
+    fill: #4b94fc;
+    cursor: pointer;
+}
