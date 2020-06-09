@@ -1,0 +1,141 @@
+*{margin: 0; padding: 0; transition: all ease 0.1s;}
+html, body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul,li{
+    list-style: none;
+}
+.chopper-container{
+    position: relative;
+    margin: auto;
+    border: 1px solid red;
+}
+.chopper-container .chopper-antlers{
+    background: #82603B;
+    width: 164px;
+    height: 98px;
+    border: 5px solid #000;
+    border-radius: 50% / 20% 20% 80% 62%;
+    border-top: 0;
+    position: absolute;
+}
+.chopper-antlers::before{
+    content: '';
+    position: absolute;
+    background: #fff;
+    width: 15%;
+    height: 33%;
+}
+.chopper-antlers > li{
+    background: #82603B;
+    height: 60%;
+    width: 17%;
+    border: 5px solid #000;
+    border-bottom: 0;
+    position: absolute;
+}
+.chopper-left-antlers{
+    /* top: 10%; */
+}
+.chopper-right-antlers{
+    /* top: 10%; */
+}
+.chopper-hat{
+    margin: auto;
+    /* width: 364px; */
+    /* height: 550px; */
+}
+.chopper-hat .chopper-hat-top{
+    height: 180px;
+    width: 310px;
+    background: #E9746D;
+    position: absolute;
+    border: 6px solid #000;
+    border-radius: 50% / 30% 30% 1% 1%;
+    left: 115px;
+    top: -144px;
+    overflow: hidden;
+}
+.chopper-hat .chopper-hat-top .chopper-hat-top-shadow{
+    background: rgba(0, 0, 0, 0.3);
+    width: 55%;
+    height: 100%;
+    position: absolute;
+    border-radius: 0 150px 0 0;
+    z-index: 2;
+}
+.chopper-hat .chopper-hat-top .chopper-hat-top-x{
+    display: flex;
+    justify-content: center;
+    transform: rotate(45deg);
+    margin: 34px 0 0 26px;
+}
+.chopper-hat .chopper-hat-top .chopper-hat-top-x .chopper-hat-top-x-center{
+    background: #fff;
+    width: 44px;
+    height: 30px;
+    margin-top: 41px;
+    z-index: 1;
+}
+/* .chopper-hat .chopper-hat-top .chopper-hat-top-x .row{
+    width: 100px;
+    height: 30px;
+    background: #fff;
+    border: 6px solid #000;
+}
+.chopper-hat .chopper-hat-top .chopper-hat-top-x .column{
+    width: 30px;
+    height: 100px;
+    background: #fff;
+    border: 6px solid #000;
+} */
+.chopper-hat .chopper-hat-top .chopper-hat-top-x::after,
+.chopper-hat .chopper-hat-top .chopper-hat-top-x::before{
+    content: '';
+    position: absolute;
+    background: white;
+    border: 6px solid #000;
+}
+.chopper-hat .chopper-hat-top .chopper-hat-top-x::before{
+    width: 100px;
+    height: 30px;
+    top: 35px;
+}
+.chopper-hat .chopper-hat-top .chopper-hat-top-x::after{
+    width: 30px;
+    height: 100px;
+}
+.chopper-hat .chopper-hat-brim{
+    position: relative;
+    border: 6px solid #000;
+    width: 540px;
+    height: 220px;
+    background: #E9746D;
+    border-radius: 50% / 50% 50% 35% 35%;
+    overflow: hidden;
+    z-index: 5;
+}
+.chopper-hat .chopper-hat-brim .chopper-hat-brim-shadow{
+    background: #A3514C;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 40%;
+    border-radius: 50px;
+}
+.chopper-hat .chopper-hat-brim::after{
+    content: '';
+    width: 100%;
+    height: 80%;
+    background: #94474D;
+    position: absolute;
+    bottom: 0;
+    border: 6px solid #000;
+    border-radius: 50% / 70% 70% 20% 20%;
+    left: -6px;
+    z-index: 3;
+}
