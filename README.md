@@ -18,10 +18,14 @@
 
   [源码](https://github.com/lx515318141/CSS-Atlas/tree/master/baidu) [预览](https://lx515318141.github.io/CSS-Atlas/baidu/index.html)
 
-  ## 4.button
+## 4.button
 
   [源码](https://github.com/lx515318141/CSS-Atlas/tree/master/button) [预览](https://lx515318141.github.io/CSS-Atlas/button/index.html)
 
-  ## 5.uoload
+## 5.uoload
 
   [源码](https://github.com/lx515318141/CSS-Atlas/tree/master/upload) [预览](https://lx515318141.github.io/CSS-Atlas/upload/index.html)
+
+## 5.Chopper
+
+  [源码](https://github.com/lx515318141/CSS-Atlas/tree/master/chopper) [预览](https://lx515318141.github.io/CSS-Atlas/chopper/index.html)
